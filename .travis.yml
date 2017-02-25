@@ -1,4 +1,8 @@
 language: python
+python:
+  - 3.5
+install:
+  - pip install coveralls
 before_script:
   - git clone https://github.com/micropython/micropython.git
   - mv micropython micropython-dev
@@ -10,3 +14,6 @@ before_script:
   - cd ../../
 script:
   - ./micropython -m test-testsuite
+  - coverage run test-testsuite.py
+after_success:
+  - coveralls

@@ -6,4 +6,4 @@ before_script:
   - make
   - ./micropython -m upip install micropython-unittest
 script:
-  - ./micropython -m unittest test-testsuite.py
+  - ./micropython -m test-testsuite

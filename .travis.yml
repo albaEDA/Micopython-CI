@@ -1,7 +1,8 @@
 language: python
 before_script:
   - git clone https://github.com/micropython/micropython.git
-  - cd micropython/unix
+  - mv micropython micropython-dev
+  - cd micropython-dev/unix
   - make axtls
   - make
   - ./micropython -m upip install micropython-unittest

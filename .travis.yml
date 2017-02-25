@@ -1,0 +1,9 @@
+language: python
+before_script:
+  - git clone https://github.com/micropython/micropython.git
+  - cd micropython/unix
+  - make axtls
+  - make
+  - ./micropython -m upip install unittest
+script:
+  - ./micropython -m unittest test-testsuite.py

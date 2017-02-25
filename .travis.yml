@@ -4,6 +4,6 @@ before_script:
   - cd micropython/unix
   - make axtls
   - make
-  - ./micropython -m upip install unittest
+  - ./micropython -m upip install micropython-unittest
 script:
   - ./micropython -m unittest test-testsuite.py
